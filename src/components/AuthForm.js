@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { db, auth } from "../firebase";
+import { auth } from "../firebase";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
 
 const AuthForm = ({ type }) => {
   const navigate = useNavigate();
@@ -28,19 +27,12 @@ const AuthForm = ({ type }) => {
         // todo: 로그인 성공 시 유저 정보 전역상태관리
         console.log(uid, userEmail);
       } else {
-        const now = new Date();
         userCredential = await createUserWithEmailAndPassword(
           auth,
           email,
           password
         );
         const user = userCredential.user;
-        await setDoc(doc(db, "users", user.uid), {
-          email: user.email,
-          createdAt: now,
-          updatedAt: now,
-          deletedAt: null,
-        });
         alert("회원가입 성공!");
       }
     } catch (err) {
