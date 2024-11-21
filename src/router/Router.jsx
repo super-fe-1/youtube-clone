@@ -4,8 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 import AuthLayout from "../components/layout/AuthLayout";
 // pages
 import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import SignUpPage from "../pages/SignUpPage";
+import AuthPage from "../pages/AuthPage";
 import DetailPage from "../pages/DetailPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
@@ -16,8 +15,8 @@ const AppRouter = () => {
     >
       <Routes>
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="/signup" element={<AuthPage />} />
         </Route>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />

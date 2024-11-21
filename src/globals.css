@@ -10,6 +10,7 @@
 :root {
   /* 색상 */
   --background: #ffffff;
+  --auth-background: #f0f4f8;
   --text-color-default: #0f0f0f;
   --text-color-secondary: #606060;
   --button-bg-primary: #f2f2f2;
@@ -23,6 +24,10 @@ body {
   background: var(--background);
   color: var(--text-color-default);
   font-family: var(--font-family);
+}
+
+.auth-bg {
+  background-color: var(--auth-background);
 }
 
 .text-default {
