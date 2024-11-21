@@ -24,9 +24,9 @@ const AuthForm = ({ type }) => {
           email,
           password
         );
-        const { uid, email } = userCredential.user;
+        const { uid, email: userEmail } = userCredential.user;
         // todo: 로그인 성공 시 유저 정보 전역상태관리
-        console.log(uid, email);
+        console.log(uid, userEmail);
       } else {
         const now = new Date();
         userCredential = await createUserWithEmailAndPassword(
