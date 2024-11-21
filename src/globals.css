@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("./assets/fonts/PretendardVariable.woff2") format("woff2");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-family: "Pretendard";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font: var(--font-family);
+}
