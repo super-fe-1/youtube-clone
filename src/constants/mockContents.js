@@ -10,6 +10,7 @@ export const mockContents = [
     date: 1672132385000,
     channel: "Tech Today",
     imgUrl: "https://picsum.photos/290",
+    category: "tech",
   },
   {
     id: "44089c7e-b576-41cc-9a5e-8a76fc519e3c",
@@ -21,6 +22,7 @@ export const mockContents = [
     date: 1600325701000,
     channel: "Home Decor",
     imgUrl: "https://picsum.photos/350",
+    category: "food",
   },
   {
     id: "9576f0b1-0b93-4d1c-92d9-b68dcd6ec01b",
@@ -43,6 +45,7 @@ export const mockContents = [
     date: 1585243005000,
     channel: "Life Optimizer",
     imgUrl: "https://picsum.photos/380",
+    category: "lifestyle",
   },
   {
     id: "c7a589d0-0039-451d-b174-39ecfd7d9b99",
@@ -54,6 +57,7 @@ export const mockContents = [
     date: 1658232171000,
     channel: "Speed Enthusiasts",
     imgUrl: "https://picsum.photos/310",
+    category: "tech",
   },
   {
     id: "fef0dba0-42e2-4ee4-9108-07384b4700fa",
@@ -66,6 +70,7 @@ export const mockContents = [
     date: 1620489519000,
     channel: "Real Estate Insights",
     imgUrl: "https://picsum.photos/340",
+    category: "finance",
   },
   {
     id: "44d8eb1c-0d07-4976-bb63-e505e4a0be8f",
@@ -77,6 +82,7 @@ export const mockContents = [
     date: 1652795013000,
     channel: "Fashion Trends",
     imgUrl: "https://picsum.photos/370",
+    category: "fashion",
   },
   {
     id: "2e1cf3fe-8d09-49e7-9f98-43c6d6e179b2",
@@ -88,6 +94,7 @@ export const mockContents = [
     date: 1608991152000,
     channel: "AI Visionary",
     imgUrl: "https://picsum.photos/390",
+    category: "mix",
   },
   {
     id: "6c7c5fa6-9c2d-4e6b-8586-0a7e71779b29",
@@ -99,6 +106,7 @@ export const mockContents = [
     date: 1630449398000,
     channel: "Home Sweet Home",
     imgUrl: "https://picsum.photos/410",
+    category: "lifestyle",
   },
   {
     id: "b5f4bc35-9e32-4694-a7f3-bf4b6f30ed4e",
@@ -110,6 +118,7 @@ export const mockContents = [
     date: 1652657817000,
     channel: "Movie Buffs",
     imgUrl: "https://picsum.photos/400",
+    category: "entertainment",
   },
   {
     id: "0f02b390-9575-419f-bf94-5a71144b96a2",
@@ -121,6 +130,7 @@ export const mockContents = [
     date: 1635244069000,
     channel: "Investing Academy",
     imgUrl: "https://picsum.photos/430",
+    category: "finance",
   },
   {
     id: "a21d62f7-d960-44a2-8504-fb6064a82c70",
@@ -132,6 +142,7 @@ export const mockContents = [
     date: 1604721231000,
     channel: "Code Masters",
     imgUrl: "https://picsum.photos/450",
+    category: "tech",
   },
   {
     id: "8c14fcb2-b585-4c56-b45d-0799a9c812b3",
@@ -143,6 +154,7 @@ export const mockContents = [
     date: 1619343953000,
     channel: "Game Gurus",
     imgUrl: "https://picsum.photos/470",
+    category: "entertainment",
   },
   {
     id: "bb64c221-6c9f-4b60-913d-6ef7e09fa8b5",
@@ -154,6 +166,7 @@ export const mockContents = [
     date: 1625242176000,
     channel: "Tech Artists",
     imgUrl: "https://picsum.photos/490",
+    category: "tech",
   },
   {
     id: "5c573b60-01d6-43b6-b0f2-58972becc8db",
@@ -165,6 +178,7 @@ export const mockContents = [
     date: 1648045312000,
     channel: "Health Gurus",
     imgUrl: "https://picsum.photos/510",
+    category: "lifestyle",
   },
   {
     id: "fa65b7d5-20b7-45c0-9f33-ccaf2a5de978",
@@ -176,6 +190,7 @@ export const mockContents = [
     date: 1610387585000,
     channel: "Steam Seekers",
     imgUrl: "https://picsum.photos/700",
+    category: "entertainment",
   },
   {
     id: "62b7e824-159f-45bc-8c9d-0b88e3a26cb9",
@@ -187,6 +202,7 @@ export const mockContents = [
     date: 1640762234000,
     channel: "Fit Life",
     imgUrl: "https://picsum.photos/550",
+    category: "lifestyle",
   },
   {
     id: "3d2d658e-0047-45a4-8690-d35b36c99f78",
@@ -198,6 +214,7 @@ export const mockContents = [
     date: 1613137350000,
     channel: "Mobile Gamers",
     imgUrl: "https://picsum.photos/570",
+    category: "entertainment",
   },
   {
     id: "1a1e9f0f-7d0b-4cc7-9f47-460df15a83a6",
@@ -209,6 +226,7 @@ export const mockContents = [
     date: 1638104325000,
     channel: "Tech Tips",
     imgUrl: "https://picsum.photos/590",
+    category: "tech",
   },
   {
     id: "6011e5de-4fa5-4738-b013-b0d4690a5e75",
@@ -220,6 +238,7 @@ export const mockContents = [
     date: 1605869357000,
     channel: "Future Tech",
     imgUrl: "https://picsum.photos/610",
+    category: "tech",
   },
   {
     id: "08e55c8b-b9a5-4bff-a428-b6fe3149b075",
@@ -231,6 +250,7 @@ export const mockContents = [
     date: 1612104258000,
     channel: "Music Legends",
     imgUrl: "https://picsum.photos/630",
+    category: "entertainment",
   },
   {
     id: "f0d3b399-7d33-45d4-93b1-684f5ab8573d",
@@ -242,6 +262,7 @@ export const mockContents = [
     date: 1647476421000,
     channel: "Digital Artists",
     imgUrl: "https://picsum.photos/650",
+    category: "mix",
   },
   {
     id: "44b504fa-3803-4f5b-bf73-b2323d1c8e59",
@@ -253,6 +274,7 @@ export const mockContents = [
     date: 1624532148000,
     channel: "Magic Tricks",
     imgUrl: "https://picsum.photos/670",
+    category: "entertainment",
   },
   {
     id: "c0e97d6f-7d16-4b10-82ae-bca7a4c8a6e9",
@@ -264,5 +286,6 @@ export const mockContents = [
     date: 1620988765000,
     channel: "YouTube Masters",
     imgUrl: "https://picsum.photos/690",
+    category: "mix",
   },
 ];
