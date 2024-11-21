@@ -1,0 +1,10 @@
+.category {
+  border: 1px solid black;
+  margin: 12px 12px 12px 0px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.category:hover {
+  background-color: gray;
+}

@@ -40,8 +40,6 @@ const Modal = () => {
           </div>
         </div>
       )}
-
-      <span className="category">전체</span>
     </div>
   );
 };
