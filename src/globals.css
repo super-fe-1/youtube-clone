@@ -25,19 +25,19 @@ body {
   font-family: var(--font-family);
 }
 
-.text-primary {
+.text-default {
   color: var(--text-color-default);
 }
 
-.text-gray {
+.text-secondary {
   color: var(--text-color-secondary);
 }
 
-.btn-primary {
+.btn-bg-primary {
   background-color: var(--button-bg-primary);
   transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-bg-primary:hover {
   background-color: var(--button-bg-hover);
 }
