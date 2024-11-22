@@ -1,14 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import "../category.css";
+import { category } from "../constants/category";
+// import { mockContents } from "../constants/mockContents";
 
 const Category = () => {
-  const categories = ["전체", "음악", "영화", "게임", "뉴스"];
+  // const [selectedCategory, setSelectedCategory] = useState(null);
+  // const handleCategoryClick = (categoryId) => {
+  //   setSelectedCategory(categoryId);
+  // };
+
+  // const filteredContents = selectedCategory
+  //   ? mockContents.filter((content) => content.categoryId === selectedCategory)
+  //   : mockContents;
 
   return (
     <div className="category-container">
-      {categories.map((category, index) => (
+      {category.map((category, index) => (
         <span key={index} className="category">
-          {category}
+          {category.name}
         </span>
       ))}
     </div>
