@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { __login } from "../redux/modules/user";
 import FormInput from "./FormInput";
 
 const AuthForm = ({ type }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -17,28 +17,15 @@ const AuthForm = ({ type }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      let userCredential;
       if (type === "login") {
-        userCredential = await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        const { uid, email: userEmail } = userCredential.user;
-        // todo: 로그인 성공 시 유저 정보 전역상태관리
+        await dispatch(__login({ email, password }));
         navigate("/");
-      } else {
-        userCredential = await createUserWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        const user = userCredential.user;
+      } else if (type === "signup") {
+        await createUserWithEmailAndPassword(auth, email, password);
         alert("회원가입 성공!");
         navigate("/login");
       }
     } catch (err) {
-      console.log(err);
       console.error("인증 오류: ", err);
       setError(`인증 실패: ${err.message}`);
     } finally {
