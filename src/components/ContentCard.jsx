@@ -1,7 +1,8 @@
+import formatViewCount from "../utils/formatViewCount";
+import formatTimestampToRelativeTime from "../utils/formatTimestampToRelativeTime";
 import { CiMenuKebab } from "react-icons/ci";
 
 const ContentCard = ({ content }) => {
-  console.log(content);
   return (
     <article>
       <img
@@ -24,10 +25,10 @@ const ContentCard = ({ content }) => {
           </div>
           <div className="text-sm text-secondary">
             <span>{content.channel}</span>
-            <div>
-              <span>조회수 {content.views}</span>
+            <div className="flex gap-1">
+              <span>조회수 {formatViewCount(content.views)}</span>
               <span>•</span>
-              <span>{content.date}</span>
+              <span>{formatTimestampToRelativeTime(content.date)}</span>
             </div>
           </div>
         </div>
