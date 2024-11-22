@@ -4,7 +4,7 @@ import NavigationBar from "../NavigationBar";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="ml-20">
       <h1 className="sr-only">유튜브 클론코딩</h1>
       <header>
         <NavigationBar />
