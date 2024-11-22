@@ -1,0 +1,133 @@
+.modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: gray;
+}
+
+.video-menu {
+  position: absolute;
+  top: 50px;
+  right: 90px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
+}
+
+.video-item {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.video-item:hover {
+  background-color: #f5f5f5;
+}
+.alert-menu {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 450px;
+  z-index: 100;
+  padding: 10px;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.system-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.alert-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 90%;
+}
+
+.alert-icon {
+  font-size: 90px;
+  color: gray;
+}
+
+.alert-text {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.5;
+  white-space: center;
+}
+
+.alert-text div {
+  margin-bottom: 5px;
+}
+.alert-text div:first-child {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
+}
+
+.profile-item {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+
+.profile-item:hover {
+  background-color: #f5f5f5;
+}
