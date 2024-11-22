@@ -1,0 +1,56 @@
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar.open {
+  width: 240px;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar.open .sidebar-item {
+  flex-direction: row; /* 열렸을 때는 아이콘과 텍스트를 가로로 배치 */
+  align-items: center;
+  max-width: 150px;
+}
+
+.sidebar-icon {
+  font-size: 24px;
+  margin-right: 10px; /* 열린 상태에서 아이콘과 텍스트 간격 */
+}
+
+.sidebar.open .sidebar-label {
+  font-size: 24px; /* 열린 상태에서 텍스트 크기 */
+  margin: 0;
+}
+
+.sidebar.closed .sidebar-label {
+  font-size: 10px; /* 닫힌 상태에서 텍스트 크기 */
+  margin-top: 5px; /* 닫힌 상태에서 아이콘과 텍스트 간격 */
+  text-align: center;
+  max-width: 50px;
+}
+
+.sidebar-item:hover {
+  background-color: #e0e0e0; /* 호버 시 배경색 */
+  color: #000; /* 호버 시 텍스트와 아이콘 색상 */
+}
