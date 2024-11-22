@@ -1,0 +1,25 @@
+.hamburger-button {
+  font-size: 30px;
+  margin: 10px;
+  border: none; /* 테두리 제거 */
+  background: none; /* 배경색 제거 */
+  cursor: pointer;
+}
+
+.youtube-logo {
+  font-size: 20px;
+  color: #212121;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트 수직 정렬 */
+}
+
+.youtube-icon {
+  margin-right: 10px;
+  color: #ff0033;
+  font-size: 40px;
+}
+
+.search-bar {
+  margin-left: auto;
+}
