@@ -1,12 +1,11 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { MdPlayCircleOutline } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleSidebar } from "../redux/sidebarSlice";
-import Sidebar from "./Sidebar";
 import SearchBar from "./SearchBar";
+import Sidebar from "./SideBar";
 import "../NavigationBar.css";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSidebar } from "../constants/store";
 const Navbar = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.sidebar.items);
@@ -22,16 +21,11 @@ const Navbar = () => {
         <FaBars />
       </button>
       {/* YOUTUBE 링크 */}
-      <a
-        href="https://www.youtube.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="youtube-logo"
-      >
+      <a href="index.js" className="youtube-logo">
         <MdPlayCircleOutline className="youtube-icon" />
         <span>YOUTUBE</span>
       </a>
-      {/* 검색창 */}
+
       <SearchBar />
 
       {/* 사이드바 */}
