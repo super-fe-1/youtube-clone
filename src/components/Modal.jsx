@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "../modal.css";
 import { PiVideoCameraLight } from "react-icons/pi";
 import { TbBell } from "react-icons/tb";
@@ -6,33 +8,52 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { CiSettings } from "react-icons/ci";
 
 const Modal = () => {
+  const isLogged = useSelector((state) => state.user.isLogged);
+
   const [isVideoDropdownOpen, setIsVideoDropdownOpen] = useState(false);
   const [isAlertDropdownOpen, setIsAlertDropdownOpen] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   const toggleVideoDropdown = () => {
     setIsVideoDropdownOpen((prev) => !prev);
     setIsAlertDropdownOpen(false);
+    setIsProfileDropdownOpen(false);
   };
 
   const toggleAlertDropdown = () => {
     setIsAlertDropdownOpen((prev) => !prev);
     setIsVideoDropdownOpen(false);
+    setIsProfileDropdownOpen(false);
+  };
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen((prev) => !prev);
+    setIsVideoDropdownOpen(false);
+    setIsAlertDropdownOpen(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLogged");
+    window.location.reload();
   };
 
   return (
     <div>
       <div className="modal">
-        <a onClick={toggleVideoDropdown} className="icon">
-          <PiVideoCameraLight />
-        </a>
+        {isLogged && (
+          <>
+            <button onClick={toggleVideoDropdown} className="icon">
+              <PiVideoCameraLight />
+            </button>
 
-        <a onClick={toggleAlertDropdown} className="icon">
-          <TbBell />
-        </a>
-
-        <a className="icon">
+            <button onClick={toggleAlertDropdown} className="icon">
+              <TbBell />
+            </button>
+          </>
+        )}
+        <button className="icon" onClick={toggleProfileDropdown}>
           <IoPersonCircleOutline />
-        </a>
+        </button>
       </div>
 
       {isVideoDropdownOpen && (
@@ -62,6 +83,20 @@ const Modal = () => {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {isProfileDropdownOpen && (
+        <div className="profile-menu">
+          {!isLogged ? (
+            <Link to={"/login"} className="profile-item">
+              로그인
+            </Link>
+          ) : (
+            <button onClick={handleLogout} className="profile-item">
+              로그아웃
+            </button>
+          )}
         </div>
       )}
     </div>
