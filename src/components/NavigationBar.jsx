@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import Sidebar from "./SideBar";
 import "../NavigationBar.css";
@@ -19,10 +20,10 @@ const Navbar = () => {
         <FaBars />
       </button>
       {/* YOUTUBE 링크 */}
-      <a href="index.js" className="youtube-logo">
+      <Link to={"/"} className="youtube-logo">
         <MdPlayCircleOutline className="youtube-icon" />
         <span>YOUTUBE</span>
-      </a>
+      </Link>
 
       <SearchBar />
 
