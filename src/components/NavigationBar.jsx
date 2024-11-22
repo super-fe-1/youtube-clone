@@ -1,17 +1,15 @@
-import React from "react";
-import { FaBars } from "react-icons/fa";
-import { MdPlayCircleOutline } from "react-icons/md";
+import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import Sidebar from "./SideBar";
 import "../NavigationBar.css";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleSidebar } from "../constants/store";
+import { FaBars } from "react-icons/fa";
+import { MdPlayCircleOutline } from "react-icons/md";
+
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const items = useSelector((state) => state.sidebar.items);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleToggleSidebar = () => {
-    dispatch(toggleSidebar());
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
@@ -29,7 +27,7 @@ const Navbar = () => {
       <SearchBar />
 
       {/* 사이드바 */}
-      <Sidebar items={items} />
+      <Sidebar isSidebarOpen={isSidebarOpen} />
     </>
   );
 };
