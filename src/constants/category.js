@@ -1,5 +1,9 @@
 export const category = [
   {
+    id: "all",
+    name: "전체",
+  },
+  {
     id: "tech",
     name: "기술",
   },

@@ -1,24 +1,17 @@
-import { useState } from "react";
-import "../category.css";
 import { category } from "../constants/category";
-// import { mockContents } from "../constants/mockContents";
+import "../category.css";
 
-const Category = () => {
-  // const [selectedCategory, setSelectedCategory] = useState(null);
-  // const handleCategoryClick = (categoryId) => {
-  //   setSelectedCategory(categoryId);
-  // };
-
-  // const filteredContents = selectedCategory
-  //   ? mockContents.filter((content) => content.categoryId === selectedCategory)
-  //   : mockContents;
-
+const Category = ({ setSelectedCategory }) => {
   return (
     <div className="category-container">
       {category.map((category, index) => (
-        <span key={index} className="category">
+        <button
+          key={index}
+          className="category"
+          onClick={() => setSelectedCategory(category.id)}
+        >
           {category.name}
-        </span>
+        </button>
       ))}
     </div>
   );
